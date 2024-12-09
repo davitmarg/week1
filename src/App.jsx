@@ -46,13 +46,13 @@ function App() {
         setChosenNames((prevItems) => [...prevItems, currentName]);
         const newRemainingNames = [...remainingNames].filter((name) => name != currentName);
         setRemainingNames(newRemainingNames);
-        setCurrentName(chooseRandom(remainingNames));
+        setCurrentName(chooseRandom(newRemainingNames));
     }
 
     const noHandler = () => {
         const newRemainingNames = [...remainingNames].filter((name) => name != currentName);
         setRemainingNames(newRemainingNames);
-        setCurrentName(chooseRandom(remainingNames));
+        setCurrentName(chooseRandom(newRemainingNames));
     }
 
     const maybeHandler = () => {
